@@ -6,7 +6,11 @@ class MyExamplesController < ApplicationController
   end
 
   def winning_lotto
-    array = [rand(60) + 1, rand(60) + 1, rand(60) + 1, rand(60) + 1, rand(60) + 1, rand(60) + 1]
+    array = []
+    6.times do
+      num = rand(60) + 1
+      array << num
+    end
 
     string = "#{array[0]} #{array[1]} #{array[2]} #{array[3]} #{array[4]} #{array[5]}"
 
