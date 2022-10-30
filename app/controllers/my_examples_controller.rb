@@ -1,17 +1,8 @@
 class MyExamplesController < ApplicationController
   def fortune_method
-    number = rand(4)
-    if number == 0
-      message = "Good luck"
-    elsif number == 1
-      message = "Bad luck"
-    elsif number == 2
-      message = "You don't want to know"
-    else
-      message = "Refresh"
-    end
+    message = ["Good luck", "Bad luck", "You don't want to know", "Refresh"]
 
-    render json: { fortune: message }
+    render json: { fortune: message.sample }
   end
 
   def winning_lotto
